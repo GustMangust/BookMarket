@@ -1,0 +1,35 @@
+﻿@{ 
+  Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Index
+        </title>
+    </head>
+    <body>
+        <h3>Книги в наличии</h3>
+        <table>
+            <thead>
+                <tr>
+                    <td Название/>
+                    <td Автор/>
+                    <td Цена/>
+                </tr>
+            </thead>
+            <tbody>
+                @{ 
+                  foreach(var book in ViewBag.Books) {
+                                <tr>
+                                    <td>@book.BookName</td>
+                                    <td>@book.BookAuthor</td>
+                                    <td>@book.BookPrice</td>
+                                    <td Цена><a href="#">Купить</a></td>
+                                </tr>
+                  }
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
